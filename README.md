@@ -23,6 +23,12 @@ Backend:
 Node.js + Express.js
 WebSockets for real-time communication
 
+Setup
+- git clone https://github.com/vachan-09/HopIn
+- npm install
+- npm start
+- Server should be hosted on local host 3000
 
 🏫 Built For
 This project was developed for Syntax Error 2025, showcasing how technology can improve campus mobility.
+
