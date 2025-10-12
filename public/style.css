@@ -1,0 +1,81 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#map {
+  height: 80vh;
+  width: 100%;
+}
+
+.controls {
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 18px;
+    width: 90%;
+    margin-top: 5px;
+  }
+}
+
+.student-emoji {
+  font-size: 28px; 
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.driver-emoji {
+  font-size: 30px; 
+  transition: transform 0.15s ease;
+}
+
+.glow {
+  text-shadow: 0 0 8px #00ff00, 0 0 12px #00ff00;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 8px #00ff00; transform: scale(1); }
+  to { text-shadow: 0 0 18px #00ff00; transform: scale(1.2); }
+}
+
+
+.driver-emoji.active:hover { transform: scale(1.15); }
+
+.driver-emoji.break { opacity: 0.9; }
+
+.student-emoji.glow { text-shadow: 0 0 8px #2ecc71, 0 0 14px #2ecc71; animation: glowPulse 1.2s infinite alternate; }
+@keyframes glowPulse {
+  from { transform: scale(1); text-shadow: 0 0 8px #2ecc71; }
+  to   { transform: scale(1.12); text-shadow: 0 0 18px #2ecc71; }
+}
+

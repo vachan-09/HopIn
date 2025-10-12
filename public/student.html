@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student - HopIn E-Rickshaw Tracker</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    /* ✅ Floating buttons styling */
+    #requestRide, #stopRequest {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2b7a0b;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 14px 30px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    #requestRide:hover, #stopRequest:hover {
+      background-color: #1e5407;
+      transform: translateX(-50%) scale(1.05);
+    }
+
+    #stopRequest {
+      display: none;
+      background-color: #e63946;
+    }
+
+    #stopRequest:hover {
+      background-color: #c0392b;
+    }
+
+    /* ✅ Logout Button Styling */
+    #logoutBtn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #2b7a0b;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+    }
+
+    #logoutBtn:hover {
+      background-color: #1e5407;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Logout Button -->
+  <button id="logoutBtn">Logout</button>
+
+  <!-- ✅ Map Section -->
+  <div id="map"></div>
+
+  <!-- ✅ Floating Action Buttons -->
+  <button id="requestRide">Request Ride</button>
+  <button id="stopRequest">Cancel Request</button>
+
+  <!-- ✅ Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- ✅ Socket.io client -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- ✅ Student Logic -->
+  <script src="student.js"></script>
+
+  <!-- ✅ Logout Logic -->
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("studentLoggedIn");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

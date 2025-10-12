@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Login | HopIn</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 400px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #00b09b;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      width: 95%;
+      background: #00b09b;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #009485;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="logo_HopIn.jpg" alt="HopIn Logo" />
+    <h2>Driver Login</h2>
+    <form action="driver.html">
+      <input type="text" placeholder="Vehicle No (Last 4 digits)" required /><br />
+      <input type="password" placeholder="Password" required /><br />
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer">HopIn © 2025</div>
+  </div>
+</body>
+</html>
