@@ -4,13 +4,20 @@ HopIn is a web-based platform that helps students view the real-time location of
 It connects students and e-rickshaw drivers seamlessly, ensuring faster, safer, and smarter transportation within college campuses.
 
 
-Features
+
+
+Features:
 
 Live Map View – Students can view all available e-rickshaws on a campus map in real time.
+
 Location Access – Automatically detects the student’s current position.
+
 Ride Requests – Students can request a rickshaw with one click.
+
 Driver Dashboard – Drivers can see nearby student requests and navigate to them.
+
 Real-Time Updates – Uses WebSockets for instant location and status synchronization.
+
 Lightweight & Fast – Simple front-end with efficient back-end architecture.
 
 
@@ -23,7 +30,7 @@ Backend:
 Node.js + Express.js
 WebSockets for real-time communication
 
-Setup
+Setup:
 - git clone https://github.com/vachan-09/HopIn
 - npm install
 - npm start
@@ -31,4 +38,5 @@ Setup
 
 🏫 Built For
 This project was developed for Syntax Error 2025, showcasing how technology can improve campus mobility.
+
 
